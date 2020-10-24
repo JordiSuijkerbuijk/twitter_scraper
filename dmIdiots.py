@@ -14,8 +14,8 @@ def login(bowser):
 	time.sleep(1)
 	username = browser.find_element_by_css_selector("input[name='session[username_or_email]']")
 	password= browser.find_element_by_css_selector("input[name='session[password]']")
-	username.send_keys("suijkerbuijk_j")
-	password.send_keys("jessiefag123")
+	username.send_keys("input username")
+	password.send_keys("input password")
 
 	submit = browser.find_element_by_xpath("//div[@data-testid='LoginForm_Login_Button']")
 	submit.click()
