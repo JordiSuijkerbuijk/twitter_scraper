@@ -32,8 +32,6 @@ def get_users():
     with open("idiotScraper_users_csv", 'r', errors='ignore') as file:
         reader = csv.reader(file, delimiter=',', quotechar='|')
         next(reader)
-    #     for row in reader:
-    #         print(row)
         for user in reader:
             browser.get('https://twitter.com/' + user[0])
             time.sleep(1)
@@ -49,7 +47,9 @@ def messages(userId):
     except:
         return False
 
-    #Check if i can open browser with cookies so my twitter stays logged in
+#Skip user if there is no message button on the profile so it becomes faster
+#find an way that i can get more tweets since right now at some point it stops getting all the tweets
+#Might be able to create an better getIdiots function were we search an tag get all the users and then search another tag and do the same.
         
 time.sleep(1)
 login(browser)
